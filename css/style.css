@@ -109,21 +109,31 @@ header .banner img {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-between;  /* Alineación para que las cards no se apilen */
 }
 
 .card {
-    width: 23%;
+    width: 22%;  /* Reduce ligeramente el tamaño de las tarjetas para dar más espacio */
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra más suave para un efecto moderno */
+    border-radius: 12px;  /* Bordes redondeados */
     overflow: hidden;
     text-align: center;
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Agregamos transiciones para efectos */
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);  /* Efecto de desplazamiento hacia arriba al hacer hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);  /* Sombra más pronunciada al hacer hover */
 }
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 250px;  /* Establecer una altura fija para todas las imágenes */
+    object-fit: cover;  /* Esto asegura que las imágenes no se deformen y se recorten proporcionalmente */
+    border-top-left-radius: 12px;  /* Redondeamos la parte superior de las imágenes */
+    border-top-right-radius: 12px;
 }
 
 .card-body {
@@ -131,27 +141,34 @@ header .banner img {
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 600;
     color: #333;
+    margin-bottom: 10px;
 }
 
 .card-text {
     font-size: 16px;
     color: #555;
+    margin-bottom: 15px;
 }
 
+/* Botones */
 .card .btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     margin: 5px;
     background-color: #007BFF;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;  /* Para darle un toque más moderno */
 }
 
 .card .btn:hover {
     background-color: #0056b3;
+    transform: translateY(-3px);  /* Efecto de desplazamiento hacia arriba */
 }
 
 .card .buy-btn {
@@ -161,6 +178,34 @@ header .banner img {
 .card .buy-btn:hover {
     background-color: #218838;
 }
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card {
+        width: 48%;  /* Dos tarjetas por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;  /* Una tarjeta por fila en pantallas más pequeñas */
+    }
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card {
+        width: 48%;  /* Dos tarjetas por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;  /* Una tarjeta por fila en pantallas más pequeñas */
+    }
+}
+
 
 /* Estilo del footer */
 .footer {
@@ -269,5 +314,79 @@ header .banner img {
     .footer-social {
         justify-content: center;
         gap: 20px;
+    }
+}
+
+
+/* Estilo para la sección de contacto */
+.contact-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-label {
+    font-weight: bold;
+}
+
+.contact-form .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo para el botón de enviar */
+.contact-form .btn-primary {
+    background-color: #007BFF;
+    border-color: #007BFF;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilo para mensajes de error de validación */
+.contact-form .invalid-feedback {
+    font-size: 12px;
+    color: #dc3545;
+}
+
+/* Estilo para los campos del formulario */
+.contact-form .row {
+    margin-bottom: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form .col-md-6 {
+        width: 100%;
     }
 }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Hogar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/imagenes/logo.jpeg" alt="logo todo hogar">
+        </div>
+        <div class="banner">
+            <img src="../assets/imagenes/cortinas-banner.jpeg" alt="Banner Cortinas">
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Categorías</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Cómo comprar</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Reseñas</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Quiénes Somos</a></li>
+        </ul>
+
+        <!-- Barra de búsqueda -->
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar">
+            <button class="search-btn">🔍</button>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="contact-section"> <div class="container"> <h2 class="text-center mb-4">Contáctanos</h2> <p class="text-center mb-5">¡Nos encantaría saber de ti! Completa el siguiente formulario para enviarnos un mensaje.</p> <form action="https://formspree.io/f/mwkjvqgj" method="POST" class="contact-form"> <div class="row"> <!-- Nombre --> <div class="col-md-6 mb-3"> <label for="name" class="form-label">Nombre</label> <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required> <div class="invalid-feedback">Por favor, ingresa tu nombre.</div> </div> <!-- Correo Electrónico --> <div class="col-md-6 mb-3"> <label for="email" class="form-label">Correo Electrónico</label> <input type="email" class="form-control" id="email" name="_replyto" placeholder="Tu correo electrónico" required> <div class="invalid-feedback">Por favor, ingresa un correo válido.</div> </div> </div> <!-- Mensaje --> <div class="mb-3"> <label for="message" class="form-label">Mensaje</label> <textarea class="form-control" id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea> <div class="invalid-feedback">Por favor, ingresa tu mensaje.</div> </div> <!-- Botón de Enviar --> <div class="d-flex justify-content-center"> <button type="submit" class="btn btn-primary">Enviar Mensaje</button> </div> </form> </div>        
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../assets/imagenes/logo.jpeg" alt="Logo Todo Hogar">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./pages/categorias.html">Categorías</a></li>
+                    <li><a href="./pages/comocomprar.html">Cómo comprar</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                    <li><a href="./pages/reseñas.html">Reseñas</a></li>
+                    <li><a href="./pages/quienessomos.html">Quiénes Somos</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Todo Hogar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

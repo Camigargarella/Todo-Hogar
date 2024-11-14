@@ -209,46 +209,91 @@ header .banner img {
     background-color: #218838;
 }
 
+/* ... (rest of your CSS) ... */
+
 /* ============================== */
 /* RESPONSIVIDAD */
 /* ============================== */
+
 @media (max-width: 768px) {
-    .card {
-        width: 48%;
+    /* Header */
+    header {
+      flex-direction: column;
+      align-items: center;
     }
-
+  
+    header .logo img,
+    header .banner img {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    /* Navbar */
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+    }
+  
+    /* Search Bar */
+    .search-bar {
+      flex-direction: column;
+    }
+  
+    .search-bar input,
+    .search-bar button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    /* Highlighted Section */
+    .highlighted {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .highlighted .actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Cards */
+    .cards {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    /* Footer */
     .footer-container {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
-    .footer-links ul {
-        justify-content: center;
-    }
-
+  
+    .footer-links ul,
     .footer-social {
-        justify-content: center;
-        gap: 20px;
+      justify-content: center;
     }
-
+  
+    /* Contact Section */
     .contact-form {
-        padding: 20px;
+      padding: 20px;
     }
-
+  
+    .contact-form .row {
+      flex-direction: column;
+    }
+  
     .contact-form .col-md-6 {
-        width: 100%;
+      width: 100%;
     }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 100%;
-    }
-
-    .footer-logo img {
-        width: 130px;
-    }
-}
+  }
 
 /* ============================== */
 /* FOOTER */

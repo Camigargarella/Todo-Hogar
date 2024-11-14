@@ -96,136 +96,89 @@ header .banner img {
 }
 
 /* ============================== */
-/* SECCIÓN DESTACADOS */
+/* SECCIÓN DE RESEÑAS */
 /* ============================== */
-.highlighted {
-    margin: 30px 0;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.highlighted h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #007BFF;
-    padding-bottom: 5px;
-}
-
-/* ============================== */
-/* TARJETAS (CARDS) */
-/* ============================== */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
-    justify-content: space-between;
+    justify-items: center;
+    margin: 40px 0;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
-    width: 22%;
     background-color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
+    padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px; /* Tamaño máximo para cada tarjeta */
     cursor: pointer;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-
-.card-body {
-    padding: 20px;
-}
-
-.card-title {
+.card h3 {
     font-size: 20px;
     font-weight: 600;
     color: #333;
     margin-bottom: 10px;
 }
 
-.card-text {
-    font-size: 16px;
-    color: #555;
+.card .stars {
+    font-size: 18px;
+    color: #FFD700; /* Color dorado para las estrellas */
     margin-bottom: 15px;
 }
 
-.card .btn {
-    padding: 12px 25px;
-    margin: 5px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    text-transform: uppercase;
-}
-
-.card .btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-}
-
-.card .buy-btn {
-    background-color: #28a745;
-}
-
-.card .buy-btn:hover {
-    background-color: #218838;
+.card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    padding: 0 10px;
 }
 
 /* ============================== */
 /* RESPONSIVIDAD */
 /* ============================== */
 @media (max-width: 768px) {
+    .reviews {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 2 columnas por fila en pantallas medianas */
+    }
+
     .card {
-        width: 48%;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links ul {
-        justify-content: center;
-    }
-
-    .footer-social {
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .contact-form {
-        padding: 20px;
-    }
-
-    .contact-form .col-md-6 {
-        width: 100%;
+        max-width: 300px; /* Tarjetas más pequeñas en pantallas medianas */
     }
 }
 
 @media (max-width: 480px) {
-    .card {
-        width: 100%;
+    .reviews {
+        grid-template-columns: 1fr; /* Una sola columna por fila en pantallas pequeñas */
     }
 
-    .footer-logo img {
-        width: 130px;
+    .card {
+        max-width: 100%; /* Las tarjetas ocupan el 100% del contenedor */
+    }
+
+    .card h3 {
+        font-size: 18px; /* Tamaño de fuente ajustado para pantallas pequeñas */
+    }
+
+    .card .stars {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 14px;
     }
 }
 
@@ -391,8 +344,3 @@ header .banner img {
 .contact-form .row {
     margin-bottom: 20px;
 }
-
-
-
-
-

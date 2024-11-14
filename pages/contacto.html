@@ -23,11 +23,11 @@
     <nav class="navbar">
         <ul class="navbar-nav">
             <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Categorías</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Cómo comprar</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Reseñas</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Quiénes Somos</a></li>
+            <li class="nav-item"><a href="../pages/categorias.html" class="nav-link">Categorías</a></li>
+            <li class="nav-item"><a href="../pages/comocomprar.html" class="nav-link">Cómo comprar</a></li>
+            <li class="nav-item"><a href="../pages/contacto.html" class="nav-link">Contacto</a></li>
+            <li class="nav-item"><a href="../pages/reseñas.html" class="nav-link">Reseñas</a></li>
+            <li class="nav-item"><a href="../pages/quienessomos.html" class="nav-link">Quiénes Somos</a></li>
         </ul>
 
         <!-- Barra de búsqueda -->
@@ -37,10 +37,36 @@
         </div>
     </nav>
 
-    <main>
+    <!-- Sección de Contacto -->
+    <section class="contact-section">
+        <div class="contact-form-container">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna pregunta o necesitas más información? ¡Estamos aquí para ayudarte! Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
 
-        <section class="contact-section"> <div class="container"> <h2 class="text-center mb-4">Contáctanos</h2> <p class="text-center mb-5">¡Nos encantaría saber de ti! Completa el siguiente formulario para enviarnos un mensaje.</p> <form action="https://formspree.io/f/mwkjvqgj" method="POST" class="contact-form"> <div class="row"> <!-- Nombre --> <div class="col-md-6 mb-3"> <label for="name" class="form-label">Nombre</label> <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required> <div class="invalid-feedback">Por favor, ingresa tu nombre.</div> </div> <!-- Correo Electrónico --> <div class="col-md-6 mb-3"> <label for="email" class="form-label">Correo Electrónico</label> <input type="email" class="form-control" id="email" name="_replyto" placeholder="Tu correo electrónico" required> <div class="invalid-feedback">Por favor, ingresa un correo válido.</div> </div> </div> <!-- Mensaje --> <div class="mb-3"> <label for="message" class="form-label">Mensaje</label> <textarea class="form-control" id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea> <div class="invalid-feedback">Por favor, ingresa tu mensaje.</div> </div> <!-- Botón de Enviar --> <div class="d-flex justify-content-center"> <button type="submit" class="btn btn-primary">Enviar Mensaje</button> </div> </form> </div>        
-    </main>
+            <!-- Formulario de contacto utilizando Formspree -->
+            <form action="https://formspree.io/f/mayjykew" method="POST" class="contact-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="footer-container">
@@ -60,7 +86,7 @@
             <div class="footer-social">
                 <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fas fa-times"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -70,3 +96,4 @@
 
 </body>
 </html>
+

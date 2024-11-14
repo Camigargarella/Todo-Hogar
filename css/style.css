@@ -103,14 +103,35 @@ header .banner img {
     padding: 20px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Alinea el contenido de la caja en una fila */
+    justify-content: space-between; /* Separa el título y los elementos de la derecha */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
 }
 
 .highlighted h2 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin: 0; /* Elimina el margen por defecto del h2 */
     border-bottom: 2px solid #007BFF;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
+
+.actions {
+    display: flex; /* Alinea los elementos dentro de "actions" en fila */
+    align-items: center; /* Alinea verticalmente los elementos dentro de "actions" */
+    gap: 20px; /* Añade espacio entre los elementos */
+}
+
+.actions h3 {
+    margin: 0; /* Elimina márgenes de los h3 */
+    font-size: 16px; /* Ajusta el tamaño del texto */
+}
+
+.highlighted-image {
+    width: 30px; /* Ajusta el tamaño de la imagen del carrito */
+    height: auto;
+}
+
+
 
 /* ============================== */
 /* TARJETAS (CARDS) */

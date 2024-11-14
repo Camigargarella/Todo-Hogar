@@ -1,44 +1,133 @@
-body {
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evitar el scroll horizontal */
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
     color: #333;
 }
 
-.header {
-    background-color: #fff;
+/* Estilo para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #efebec;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-.bg-custom{
-
-    background-color: #91908e;
-
+header .logo img {
+    width: 260px;
+    height: 229px;
+    margin: 10px;
+    padding: 10px;
+    
 }
 
-.nav-link {
+header .banner img {
+    width: 1211px;
+    height: 200px;
+    display: flex;
+    
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #918f90;
+    padding: 5px 20px; /* Reducir padding superior e inferior */
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    gap: 15px; /* Reducir espacio entre los enlaces */
+    margin-left: 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+    text-decoration: none;
+    color: #333;
     font-weight: bold;
-    color: #333 !important;
 }
 
-.nav-link:hover {
-    color: #007BFF !important;
+.navbar-nav .nav-item .nav-link:hover {
+    color: #007BFF;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reducir el espacio entre el input y el botón */
 }
 
 .search-bar input {
-    width: 250px;
+    padding: 8px;
+    width: 200px; /* Ajusta el tamaño del input según lo necesario */
 }
 
 .search-bar button {
-    margin-left: 5px;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el contenedor de lo más destacado */
+.highlighted {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .highlighted h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
     border-bottom: 2px solid #007BFF;
-    display: inline-block;
     padding-bottom: 5px;
+}
+
+/* Estilo para las tarjetas */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 23%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 20px;
 }
 
 .card-title {
@@ -51,20 +140,134 @@ body {
     color: #555;
 }
 
-.card-body .btn-custom {
-    background-color: #ebebeb;
-    border: 2px solid black;
+.card .btn {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.card-body .btn-primary:hover {
+.card .btn:hover {
     background-color: #0056b3;
 }
 
-.card-body .btn-success {
+.card .buy-btn {
     background-color: #28a745;
-    border: none;
 }
 
-.card-body .btn-success:hover {
+.card .buy-btn:hover {
     background-color: #218838;
+}
+
+/* Estilo del footer */
+.footer {
+    background-color: #222;  /* Fondo oscuro */
+    color: #fff;
+    padding: 60px 20px;  /* Espaciado amplio y elegante */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+    position: relative; /* Hacer que el contenedor del footer se posicione de manera relativa */
+    z-index: 1;
+}
+
+/* Contenedor principal */
+.footer-container {
+    max-width: 1200px; /* Limitamos el ancho */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Logo */
+.footer-logo img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Enlaces */
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007BFF; /* Azul atractivo */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* Iconos de redes sociales */
+.footer-social {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.footer-social .social-icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    background-color: #333;  /* Fondo oscuro */
+    padding: 14px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    background-color: #007BFF; /* Fondo azul en hover */
+    transform: scale(1.2); /* Efecto de zoom */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #1a1a1a;  /* Fondo más oscuro para el pie */
+    padding: 20px 0;  /* Mayor espacio arriba y abajo */
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid black; /* Línea de separación superior */
+    width: 100%; /* Aseguramos que ocupe todo el ancho */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0; /* Para que se quede al fondo */
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links ul {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+        gap: 20px;
+    }
 }

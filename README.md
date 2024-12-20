@@ -1,45 +1,48 @@
-# Todo Hogar
+# **Todo Hogar**
 
-**Todo Hogar** es una tienda en línea especializada en productos para el hogar, con un enfoque en cortinas y accesorios decorativos de alta calidad. Ofrecemos una experiencia de compra sencilla y accesible, con opciones de pago en cuotas sin interés y atención al cliente personalizada. Este repositorio contiene los archivos básicos de la página web de **Todo Hogar**, incluyendo su estructura HTML, CSS y elementos interactivos.
+**Todo Hogar** es una tienda en línea especializada en productos de decoración para el hogar, con un enfoque principal en cortinas y accesorios decorativos de alta calidad. Nuestro objetivo es ofrecer una experiencia de compra sencilla y accesible, permitiendo a los clientes disfrutar de opciones de pago en cuotas sin interés y contar con atención personalizada. Este repositorio contiene los archivos fundamentales de la página web de **Todo Hogar**, que incluyen HTML, CSS, y elementos interactivos.
 
-## Descripción
+## **Descripción del Proyecto**
 
-La página web está diseñada para ofrecer una experiencia de usuario fluida y agradable, con una interfaz moderna y fácil de navegar. Incluye las siguientes secciones principales:
+La página web de **Todo Hogar** ha sido diseñada con el objetivo de ofrecer una experiencia de usuario intuitiva, moderna y fácil de navegar. Está optimizada para facilitar la compra de productos para el hogar, con secciones clave como categorías de productos, información de compra, testimonios de clientes, y más.
 
-1. **Página de Inicio**: Presenta una selección destacada de productos con opciones para ver detalles y comprar.
-2. **Categorías**: Página dedicada a las diferentes categorías de productos, como cortinas blackout, roller, bandas verticales y paneles orientales.
-3. **Cómo Comprar**: Información detallada sobre el proceso de compra en línea.
-4. **Contacto**: Formulario de contacto para consultas, con integración con [Formspree](https://formspree.io/).
-5. **Reseñas**: Testimonios de clientes satisfechos con los productos de Todo Hogar.
-6. **Quiénes Somos**: Información sobre la empresa y sus valores.
+### **Características Principales:**
 
-## Estructura del Proyecto
+1. **Página de Inicio**: Destaca los productos más populares y ofrece opciones para ver detalles y realizar compras.
+2. **Categorías**: Página dedicada a las diversas categorías de productos como cortinas blackout, roller, bandas verticales, y paneles orientales.
+3. **Cómo Comprar**: Explicación clara y detallada sobre el proceso de compra en línea.
+4. **Contacto**: Formulario de contacto integrado con [Formspree](https://formspree.io/) para facilitar la comunicación.
+5. **Reseñas**: Testimonios de clientes satisfechos con los productos de **Todo Hogar**.
+6. **Quiénes Somos**: Información sobre la empresa, su misión y valores.
 
-El proyecto se divide en varias páginas HTML interrelacionadas y una estructura de carpetas organizada para los archivos de estilos y recursos.
+## **Estructura del Proyecto**
 
-### Archivos Principales:
+El proyecto está dividido en varias páginas HTML interconectadas, con una estructura de carpetas organizada para los archivos de estilo, imágenes y recursos adicionales.
 
-- **index.html**: Página principal que presenta productos destacados.
-- **categorias.html**: Página que muestra las categorías de productos disponibles.
-- **comocomprar.html**: Guía sobre cómo realizar compras en línea.
-- **contacto.html**: Formulario de contacto para los usuarios.
-- **reseñas.html**: Página con las reseñas de los clientes.
-- **quienessomos.html**: Información sobre la empresa.
+### **Archivos Principales:**
 
-### Recursos:
+- **index.html**: Página de inicio con los productos destacados.
+- **categorias.html**: Página que muestra las distintas categorías de productos disponibles.
+- **comocomprar.html**: Explicación sobre cómo realizar compras en línea.
+- **contacto.html**: Formulario de contacto para consultas.
+- **reseñas.html**: Página de reseñas y testimonios de clientes.
+- **quienessomos.html**: Información acerca de la empresa.
+
+### **Estructura de Recursos:**
 
 - **assets/imagenes/**: Contiene las imágenes usadas en el sitio, como logotipos y banners.
-- **css/**: Contiene los archivos de estilos CSS para el diseño de la página. Los estilos son específicos para cada sección del sitio.
+- **css/**: Archivos CSS para estilizar las páginas web. Incluye estilos específicos para cada sección.
+- **js/**: Archivos JavaScript que gestionan interacciones dinámicas como el manejo del carrito de compras y la carga de productos desde un archivo JSON.
 
-### Fuentes y Librerías:
+### **Fuentes y Librerías:**
 
-- **Google Fonts**: Se utiliza la fuente `Roboto` para el texto principal.
-- **Font Awesome**: Para los íconos sociales y botones interactivos.
-- **Formspree**: Se utiliza para gestionar los formularios de contacto.
+- **Google Fonts**: Se utiliza la fuente `Roboto` para el texto principal del sitio.
+- **Font Awesome**: Para íconos sociales y botones interactivos.
+- **Formspree**: Para gestionar formularios de contacto de manera fácil y eficiente.
 
-## Instalación
+## **Instalación**
 
-Para visualizar el sitio web en tu equipo local, sigue estos pasos:
+Sigue estos pasos para ver el sitio web en tu entorno local:
 
 1. **Clona el repositorio**:
 
@@ -49,4 +52,23 @@ Para visualizar el sitio web en tu equipo local, sigue estos pasos:
 
 2. **Abre el archivo `index.html`** en tu navegador preferido.
 
-    Puedes navegar entre las diferentes páginas utilizando el menú de navegación.
+    Una vez que abras el archivo, podrás navegar entre las distintas páginas utilizando el menú de navegación que se encuentra en la parte superior de la página.
+
+### **Requisitos:**
+
+- No se requieren dependencias externas para ver el sitio. Sin embargo, para ejecutar funcionalidades dinámicas (como agregar productos al carrito), asegúrate de que el navegador soporte JavaScript y que tengas conexión a Internet para cargar los recursos externos.
+
+## **Funcionalidades del Proyecto**
+
+- **Carga de Productos**: Los productos se cargan dinámicamente desde un archivo JSON (`data.json`), lo que permite la actualización sencilla del catálogo.
+- **Carrito de Compras**: Los usuarios pueden agregar productos al carrito, actualizar las cantidades y eliminar productos, con los cambios reflejados en el almacenamiento local (`localStorage`).
+- **Finalizar Compra**: Después de agregar productos al carrito, los usuarios pueden proceder con la compra, lo que genera una confirmación mediante alertas interactivas.
+- **Interacción con el Usuario**: Se utiliza `SweetAlert2` para mostrar alertas de confirmación e información interactivas, tales como la confirmación de adición de productos al carrito, eliminaciones, y mensajes de agradecimiento.
+
+## **Tecnologías Utilizadas**
+
+- **HTML**: Estructura básica del sitio web.
+- **CSS**: Estilos para diseñar el sitio de forma moderna y responsiva.
+- **JavaScript**: Interacciones dinámicas como la carga de productos y el manejo del carrito de compras.
+- **SweetAlert2**: Para generar alertas de confirmación e información interactivas.
+- **Formspree**: Para gestionar el formulario de contacto.

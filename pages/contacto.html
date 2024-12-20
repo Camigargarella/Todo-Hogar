@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -53,8 +55,8 @@
             <h2>Contáctanos</h2>
             <p>¿Tienes alguna pregunta o necesitas más información? ¡Estamos aquí para ayudarte! Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
 
-            <!-- Formulario de contacto utilizando Formspree -->
-            <form action="https://formspree.io/f/mayjykew" method="POST" class="contact-form">
+            <!-- Formulario de contacto -->
+            <form id="contactForm" action="https://formspree.io/f/mayjykew" method="POST" class="contact-form">
                 <div class="row">
                     <div class="col-md-6">
                         <label for="name" class="form-label">Nombre</label>
@@ -104,6 +106,41 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Expresión regular para validar el correo electrónico
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!name || !email || !message) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Campos incompletos',
+                    text: 'Por favor, completa todos los campos.',
+                });
+                event.preventDefault(); // Evita el envío del formulario
+                return;
+            }
+
+            if (!emailRegex.test(email)) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Correo inválido',
+                    text: 'Por favor, ingresa un correo electrónico válido.',
+                });
+                event.preventDefault();
+                return;
+            }
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Formulario enviado',
+                text: 'Tu mensaje ha sido enviado correctamente.',
+            });
+        });
+    </script>
 </body>
 </html>
-

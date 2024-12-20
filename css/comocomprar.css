@@ -1,0 +1,48 @@
+/* Sección principal - Cómo Comprar */
+main {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.how-to-buy {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.how-to-buy h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.how-to-buy p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.step {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #555;
+}

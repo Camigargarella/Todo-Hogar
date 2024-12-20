@@ -6,21 +6,18 @@
     <title>Todo Hogar</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
     <header class="header">
         <div class="logo">
-            <img src="./assets/imagenes/logo.jpeg" alt="logo todo hogar">
+            <img src="./assets/imagenes/logo.jpeg" alt="Logo de Todo Hogar">
         </div>
         <div class="banner">
-            <img src="./assets/imagenes/cortinas-banner.jpeg" alt="Banner Cortinas">
+            <img src="./assets/imagenes/cortinas-banner.jpeg" alt="Imagen de un banner con cortinas">
         </div>
     </header>
 
-    <!-- Barra de navegación -->
     <nav class="navbar">
         <ul class="navbar-nav">
             <li class="nav-item"><a href="./index.html" class="nav-link">Inicio</a></li>
@@ -31,64 +28,61 @@
             <li class="nav-item"><a href="./pages/quienessomos.html" class="nav-link">Quiénes Somos</a></li>
         </ul>
 
-        <!-- Barra de búsqueda -->
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar">
-            <button class="search-btn">🔍</button>
+        <div class="search-bar" role="search" aria-label="Barra de búsqueda">
+            <input type="text" placeholder="Buscar" aria-label="Buscar">
+            <button class="search-btn" aria-label="Buscar">🔍</button>
         </div>
     </nav>
 
     <main>
         <section class="highlighted">
             <h2>Lo más destacado</h2>
-            
             <div class="actions">
-                <h3>CREAR CUENTA</h3>
-                <h3>INICIAR SESION</h3>
-                <img src="./assets/imagenes/carrito.jpeg" alt="Carrito" class="highlighted-image">
+                <button class="btn action-btn">Crear Cuenta</button>
+                <button class="btn action-btn">Iniciar Sesión</button>
+                <img src="./assets/imagenes/carrito.jpeg" alt="Carrito de compras" class="highlighted-image">
             </div>
         </section>
-        
-        
-        
-        
+
+        <section class="products">
+            <h2>Nuestros Productos</h2>
             <div class="cards">
-                <div class="card">
-                    <img src="./assets/imagenes/cortina.jpeg" alt="Cortina Blackout">
+                <article class="card">
+                    <img src="./assets/imagenes/cortina.jpeg" alt="Set de dos cortinas Blackout">
                     <div class="card-body">
                         <h3 class="card-title">SET x2 - CORTINA BLACKOUT</h3>
                         <p class="card-text">$79,995 - 3 cuotas sin interés</p>
-                        <a href="#" class="btn">DETALLES</a>
-                        <a href="#" class="btn buy-btn">COMPRAR</a>
+                        <a href="#" class="btn">Detalles</a>
+                        <a href="#" class="btn buy-btn">Comprar</a>
                     </div>
-                </div>
-                <div class="card">
+                </article>
+                <article class="card">
                     <img src="./assets/imagenes/card2.jpeg" alt="Cortina Roller">
                     <div class="card-body">
                         <h3 class="card-title">CORTINA ROLLER</h3>
                         <p class="card-text">$192,146 - 3 cuotas sin interés</p>
-                        <a href="#" class="btn">DETALLES</a>
-                        <a href="#" class="btn buy-btn">COMPRAR</a>
+                        <a href="#" class="btn">Detalles</a>
+                        <a href="#" class="btn buy-btn">Comprar</a>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/imagenes/card3.jpeg" alt="Cortina Bandas Verticales">
+                </article>
+                <article class="card">
+                    <img src="./assets/imagenes/card3.jpeg" alt="Cortina de bandas verticales">
                     <div class="card-body">
                         <h3 class="card-title">CORTINA BANDAS VERTICALES</h3>
                         <p class="card-text">$42,548 - 3 cuotas sin interés</p>
-                        <a href="#" class="btn">DETALLES</a>
-                        <a href="#" class="btn buy-btn">COMPRAR</a>
+                        <a href="#" class="btn">Detalles</a>
+                        <a href="#" class="btn buy-btn">Comprar</a>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/imagenes/card4.jpeg" alt="Paneles Orientales">
+                </article>
+                <article class="card">
+                    <img src="./assets/imagenes/card4.jpeg" alt="Paneles orientales">
                     <div class="card-body">
                         <h3 class="card-title">PANELES ORIENTALES</h3>
                         <p class="card-text">$8,990 - 3 cuotas sin interés</p>
-                        <a href="#" class="btn">DETALLES</a>
-                        <a href="#" class="btn buy-btn">COMPRAR</a>
+                        <a href="#" class="btn">Detalles</a>
+                        <a href="#" class="btn buy-btn">Comprar</a>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
@@ -98,7 +92,7 @@
             <div class="footer-logo">
                 <img src="./assets/imagenes/logo.jpeg" alt="Logo Todo Hogar">
             </div>
-            <div class="footer-links">
+            <nav class="footer-links">
                 <ul>
                     <li><a href="./index.html">Inicio</a></li>
                     <li><a href="./pages/categorias.html">Categorías</a></li>
@@ -107,19 +101,17 @@
                     <li><a href="./pages/reseñas.html">Reseñas</a></li>
                     <li><a href="./pages/quienessomos.html">Quiénes Somos</a></li>
                 </ul>
-            </div>
+            </nav>
             <div class="footer-social">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fas fa-times"></i></a>
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Todo Hogar. Todos los derechos reservados.</p>
         </div>
     </footer>
-    
-    
 
+    <script src="./script.js"></script>
 </body>
 </html>

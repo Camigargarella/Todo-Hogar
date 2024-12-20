@@ -47,7 +47,7 @@ Sigue estos pasos para ver el sitio web en tu entorno local:
 1. **Clona el repositorio**:
 
     ```bash
-    git clone https://github.com/tu-usuario/todo-hogar.git
+    git clone https://github.com/Camigargarella/todo-hogar.git
     ```
 
 2. **Abre el archivo `index.html`** en tu navegador preferido.

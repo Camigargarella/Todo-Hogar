@@ -7,12 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/checkout.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
 
     <header class="header">
         <div class="logo">
-            <img src="../assets/imagenes/logo.jpeg" alt="logo todo hogar">
+            <a href="./index.html"><img src="../assets/imagenes/logo.jpeg" alt="logo todo hogar"></a>
         </div>
         <div class="banner">
             <img src="../assets/imagenes/cortinas-banner.jpeg" alt="Banner Cortinas">
@@ -22,9 +25,12 @@
     <main>
         <section class="checkout">
             <h2>Detalles de tu compra</h2>
-            <div id="cart-items"></div>
-            <div id="total"></div>
-            <button onclick="finalizePurchase()">Finalizar compra</button>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="total-container">
+                <h3 id="total">Total: $0</h3>
+                <button onclick="finalizePurchase()" class="finalize-btn">Finalizar compra</button>
+                <button onclick="goHome()" class="home-btn">Volver al inicio</button>
+            </div>
         </section>
     </main>
 
@@ -49,6 +55,7 @@
         </div>
     </footer>
 
+    <script src="./checkout.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>

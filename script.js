@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
     fetchData();
 
@@ -24,19 +26,59 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
                 cardsContainer.appendChild(card);
             });
+
+            Swal.fire({
+                title: "Productos cargados exitosamente",
+                icon: "success",
+                timer: 2000,
+                showConfirmButton: false
+            });
+
         } catch (error) {
             console.error("Error fetching data:", error);
+
+            Swal.fire({
+                title: "Error al cargar productos",
+                text: "Hubo un problema al obtener los datos del servidor.",
+                icon: "error",
+                confirmButtonText: "Aceptar"
+            });
         }
     }
 
-    // Función que se activa al hacer click en "Comprar"
+    // Función para manejar la compra de un producto
     window.handleBuy = (productId) => {
-        const confirmAction = confirm("¿Quieres finalizar la compra o seguir viendo?");
-        if (confirmAction) {
-            // Redirige a la página de compra
-            window.location.href = `./checkout.html?productId=${productId}`;
-        } else {
-            alert("Sigues viendo productos.");
-        }
+        fetch('./data.json')
+            .then(response => response.json())
+            .then(products => {
+                const product = products.find(p => p.id === productId);
+
+                // Obtener el carrito actual del localStorage
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                // Verificar si el producto ya está en el carrito
+                const existingProduct = cart.find(item => item.id === productId);
+                if (existingProduct) {
+                    existingProduct.quantity += 1;
+                } else {
+                    cart.push({ ...product, quantity: 1 });
+                }
+
+                // Guardar el carrito actualizado en localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                Swal.fire({
+                    title: "Producto agregado al carrito",
+                    text: `${product.title} ha sido añadido al carrito.`,
+                    icon: "success",
+                    confirmButtonText: "Ir al carrito",
+                    showCancelButton: true,
+                    cancelButtonText: "Seguir comprando",
+                }).then(result => {
+                    if (result.isConfirmed) {
+                        window.location.href = './checkout.html';
+                    }
+                });
+            });
     };
 });

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "SET x2 - CORTINA BLACKOUT",
+        "description": "$79,995 - 3 cuotas sin interés",
+        "image": "./assets/imagenes/cortina.jpeg"
+    },
+    {
+        "id": 2,
+        "title": "CORTINA ROLLER",
+        "description": "$192,146 - 3 cuotas sin interés",
+        "image": "./assets/imagenes/card2.jpeg"
+    },
+    {
+        "id": 3,
+        "title": "CORTINA BANDAS VERTICALES",
+        "description": "$42,548 - 3 cuotas sin interés",
+        "image": "./assets/imagenes/card3.jpeg"
+    },
+    {
+        "id": 4,
+        "title": "PANELES ORIENTALES",
+        "description": "$8,990 - 3 cuotas sin interés",
+        "image": "./assets/imagenes/card4.jpeg"
+    }
+]
